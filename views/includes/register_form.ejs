@@ -1,0 +1,54 @@
+<div style="z-index: 12;
+            display: block;
+            text-align: right;
+            background-color: #333a40;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 1.25rem;
+            color: grey;
+            width: 20rem;
+            margin-top: 3.5rem;
+            padding-top: .5rem;
+            right: 1rem;
+            border-radius: .75rem;
+            padding: .75rem;
+            font-size: 1rem;
+            ">
+    <form action="register" method="post" style="text-align: left; display: flex; flex-direction: column">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="First Name" required/>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Last Name" required/>
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Address" required/>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="City" required/>
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" placeholder="State" required/>
+        <label for="zip">Zip</label>
+        <input type="text" id="zip" name="zip" placeholder="Zip Code" required/>
+        <label for="age">Age</label>
+        <select name="age" id="age" required>
+            <option value="select">Select</option>
+            <% for (let i=18; i <=80;  i++ ) { %>
+                <option value="<%= i %>"><%= i %></option>
+            <%}%>
+        </select><br/>
+        <p>Please Select a Gender:</p>
+        <div style="display:flex; flex-direction: row; align-items: center; padding-bottom: 30px">
+            <input type="radio" id="male" name="genders" value="male">
+            <label for="male" style="padding-right: 20px; padding-left: 5px">Male</label><br>
+            <input type="radio" id="female" name="genders" value="female">
+            <label for="female" style="padding-right: 20px; padding-left: 5px">Female</label><br>
+        </div>
+        <div style="display:flex; flex-direction: row; align-items: center; padding-bottom: 20px">
+            <input type="checkbox" id="consent" name="consent">
+            <label for="consent" style="padding-left: 10px;">Check the box to consent!</label>
+        </div>
+        <label for="bio">Bio</label>
+        <textarea name="bio" rows="4" cols="50" style="margin-bottom: 10px" required></textarea>
+        <div style="padding-top: .4rem;">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
